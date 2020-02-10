@@ -1,0 +1,74 @@
+﻿<html>
+<head>
+    <title>websocket client</title>
+    <script type="text/javascript">
+        if (typeof module === 'undefined') {
+            var module = window.module = { exports: {} };
+        }
+        if (!window.exports) window.exports = module.exports;
+        if (typeof require !== 'function') require = function () { return window.exports; };
+    </script>
+    <script type="text/javascript" src="static/communication.js"></script>
+    
+</head>
+<body>
+    <fieldset id="joinArea">
+        <legend>Join</legend>
+        <form id="joinForm">
+            <div>
+                <label>Chat Id</label><input type="text" id="chatId" placeholder="Chat Room Id" value="9978AFDB-85FF-4709-B8D3-18F294BD81CD" />
+            </div>
+            <div>
+                <label>Chat Name</label><input type="text" id="chatName" placeholder="Chat Room Name" value="YIY's chat" />
+            </div>
+            <div>
+                <label>User Id</label><input type="text" id="userId" placeholder="User Id" value="2E30CFCA-E015-4525-BCF4-7B3F7BB2AB83" />
+            </div>
+            <div>
+                <label>User Name</label><input type="text" id="userName" placeholder="User Name" value="YIY" />
+            </div>
+            <a type="submit" id="startBtn" value="Join">Join</a>
+        </form>
+    </fieldset>
+    <fieldset id="chatArea" style="display:none">
+        <legend>Chat</legend>
+        <div id="chatUI"></div>
+    </fieldset>
+    <script type="text/javascript">
+        document.getElementById("startBtn").onclick = function () {
+            var user = {
+                "Id": document.getElementById("userId").value,
+                "Username":document.getElementById("userName").value,
+            };
+            user.Alias = user.Username;
+            var chatOpts = {
+                id: document.getElementById("chatId").value,
+                user: user,
+                url:"ws://127.0.0.1:5000/im"
+            };
+
+            var chat = new COM.Chat(chatOpts);
+            var chatUI;
+            chat.join(function (cmd,chat) {
+                if(cmd.Name==="PARTICIPANTS"){
+                    console.info("服务器端同意加入,返回了PARTICIPANTS命令.");
+                    document.getElementById("joinArea").style.display = "none";
+                    var elem = document.getElementById("chatArea");
+                    elem.style.display = "";
+                    chatUI = new COM.ChatUI(chat, elem);
+                }else if(cmd.Name==="JOIN"){
+                    if(cmd.Data.UserId===user.Id) return;
+                    chatUI.appendMessage({
+                        content:cmd.Data.Content,
+                        sender:cmd.Sender,
+                        time:cmd.Time
+                    });
+                }else {
+                    chatUI.appendMessage(cmd);
+                }
+                
+            });
+        }
+    </script>
+</body>
+</html>

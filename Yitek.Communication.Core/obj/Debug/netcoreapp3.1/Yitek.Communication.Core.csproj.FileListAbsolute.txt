@@ -1,0 +1,13 @@
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\obj\Debug\netcoreapp3.1\Yitek.Communication.Core.csprojAssemblyReference.cache
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\obj\Debug\netcoreapp3.1\Yitek.Communication.Core.AssemblyInfoInputs.cache
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\obj\Debug\netcoreapp3.1\Yitek.Communication.Core.AssemblyInfo.cs
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Yitek.Communication.Core.exe
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Yitek.Communication.Core.deps.json
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Yitek.Communication.Core.runtimeconfig.json
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Yitek.Communication.Core.runtimeconfig.dev.json
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Yitek.Communication.Core.dll
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Yitek.Communication.Core.pdb
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\obj\Debug\netcoreapp3.1\Yitek.Communication.Core.csproj.CopyComplete
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\obj\Debug\netcoreapp3.1\Yitek.Communication.Core.dll
+F:\Yitek\Yitek.Communication\Yitek.Communication.Core\obj\Debug\netcoreapp3.1\Yitek.Communication.Core.pdb
