@@ -1,0 +1,6 @@
+﻿  Screen.cpp
+  TestGDI.cpp
+F:\Yitek\Yitek.Communication\CaptureTest\TestGDI\TestGDI.cpp(133,17): warning C4244: “*=”: 从“double”转换到“int”，可能丢失数据
+F:\Yitek\Yitek.Communication\CaptureTest\TestGDI\TestGDI.cpp(133,27): warning C4244: “*=”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+  TestGDI.vcxproj -> F:\Yitek\Yitek.Communication\Debug\TestGDI.exe
